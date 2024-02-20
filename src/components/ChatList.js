@@ -13,7 +13,7 @@ const ChatList = ({ userId }) => {
   useEffect(() => {
     getChatList()
       .then(chatData => {
-        console.log("==>",chatData)
+        console.log("==>", chatData)
         setChatList(chatData);
       })
       .catch(error => {
@@ -99,6 +99,11 @@ const ChatList = ({ userId }) => {
 
             <View style={styles.rightContainer}>
               <Text style={styles.timeStamp}>
+                {/* {formattedTime = new Intl.DateTimeFormat("en-US", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  second: "2-digit",
+                }).format(dateObject)} */}
                 {item.lastMessage.timestamp?.toDate().toDateString()}
               </Text>
               {item.mute && (
@@ -134,7 +139,7 @@ const styles = StyleSheet.create({
   username: {
     color: Colors.textColor,
     fontSize: 15,
-    fontWeight:'500'
+    fontWeight: '500'
   },
   message: {
     color: Colors.textGrey,

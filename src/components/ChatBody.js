@@ -101,12 +101,22 @@ const ChatBody = ({ chatId, userId }) => {
                 {item.sender === userId ? (
                   <UserImageView
                     image={item.image}
-                    time={item.timestamp?.toDate().toDateString()}
+                    time={new Intl.DateTimeFormat("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      //second: "2-digit",
+                    }).format(item.timestamp?.toDate())}
+                    // time={item.timestamp?.toDate().toDateString()}
                   />
                 ) : (
                   <OtherUserImageView
                     image={item.image}
-                    time={item.timestamp?.toDate().toDateString()}
+                    time={new Intl.DateTimeFormat("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    //  second: "2-digit",
+                    }).format(item.timestamp?.toDate())}
+                    // time={item.timestamp?.toDate().toDateString()}
                   />
                 )}
               </>
@@ -115,12 +125,22 @@ const ChatBody = ({ chatId, userId }) => {
                 {item.sender === userId ? (
                   <UserMessageView
                     message={item.body}
-                    time={item.timestamp?.toDate().toDateString()}
+                    time={new Intl.DateTimeFormat("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                     // second: "2-digit",
+                    }).format(item.timestamp?.toDate())}
+                    // time={item.timestamp?.toDate().toDateString()}
                   />
                 ) : (
                   <OtherUserMessageView
                     message={item.body}
-                    time={item.timestamp?.toDate().toDateString()}
+                    time={new Intl.DateTimeFormat("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      //second: "2-digit",
+                    }).format(item.timestamp?.toDate())}
+                    // time={item.timestamp?.toDate().toDateString()}
                   />
                 )}
               </>

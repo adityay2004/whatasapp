@@ -21,9 +21,9 @@ const App = () => {
         screenOptions={{
           headerShown: false
         }}>
-        <Stack.Screen name='StartUpScreen' component={StartUpScreen} ></Stack.Screen>
-        <Stack.Screen name='Auth' component={Auth}></Stack.Screen>
-        <Stack.Screen name='AddDetails' component={AddDetails} ></Stack.Screen>
+        <Stack.Screen name='StartUpScreen' component={StartUpScreen} />
+        <Stack.Screen name='Auth' component={Auth} />
+        <Stack.Screen name='AddDetails' component={AddDetails} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
         <Stack.Screen name="ContactScreen" component={ContactScreen} />
